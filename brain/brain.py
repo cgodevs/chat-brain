@@ -1,7 +1,15 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from tools import *
 
 app = Flask(__name__)
+CORS(app,
+     resources={r"/*": {
+         "origins": "http://localhost:3000",  # Be specific with origin for requests with credentials
+         "methods": ["GET", "POST", "OPTIONS"],
+         "allow_headers": ["Content-Type", "Authorization"],
+         "supports_credentials": True  # Enable credentials support
+     }})
 
 
 @app.route('/')
@@ -20,4 +28,4 @@ def send_message():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True, host='0.0.0.0', port=5000)

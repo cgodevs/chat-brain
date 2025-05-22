@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.4
-FROM --platform=$BUILDPLATFORM python:3.10-alpine AS builder
+FROM --platform=$BUILDPLATFORM python:3.11-alpine AS builder
 
 WORKDIR /app
 
@@ -7,10 +7,11 @@ COPY requirements.txt /app
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip3 install -r requirements.txt
 
-COPY . /app
-
+ENV OPENAI_API_KEY=${OPENAI_API_KEY}
+COPY .. /app
+EXPOSE 5000
 ENTRYPOINT ["python3"]
-CMD ["app.py"]
+CMD ["brain.py"]
 
 FROM builder as dev-envs
 
