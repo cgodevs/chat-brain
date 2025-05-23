@@ -1,0 +1,109 @@
+
+---> Tabelas Processuais Unificadas do Poder Judiciário:
+As Tabelas Processuais Unificadas do Poder Judiciário foram criadas pela Resolução CNJ nº 46, de 18 de dezembro de 2007, e elaboradas pela Comissão de Padronização e Uniformização Taxonômica e Terminológica do CNJ.
+O objetivo é garantir a uniformidade pelas atividades de classificação de feitos e de lançamento dos eventos de movimentação processual na aplicação desses instrumentos e facilitar a recuperação das informações.
+Atualmente, há quatro tabelas processuais unificadas para o Poder Judiciário:
+    Tabela de Assuntos Processuais: utilizada para padronizar nacionalmente o cadastramento das matérias ou temas discutidos nos processos;
+    Tabela de Classes Processuais: usada na classificação do procedimento judicial ou administrativo adequado ao pedido;
+    Tabela de Movimentações Processuais: para o registro dos procedimentos e das rotinas dos atos processuais que impulsionam o processo;
+    Tabela de Documentos Processuais: usada para padronizar a nomenclatura das peças juntadas aos autos.
+
+https://docs.pdpj.jus.br/servicos-estruturantes/tpu
+https://gateway.stg.cloud.pje.jus.br/tpu/swagger-ui.html#/consulta-db-rest-controller/pesquisarClassesUsingGET
+
+________________________________________
+---> PESSOAS:
+O objetivo do serviço de cadastro de pessoas é armazenar de forma centralizada os dados de todas as pessoas (físicas, jurídicas e entes despersonalizados) utilizados pelos demais serviços e módulos da PDPJ, bem como pelos diversos sistemas de processo judicial eletrônico.
+
+O escopo mínimo deste projeto visa armazenar as seguintes informações das pessoas:
+    Documentos da pessoa física com indicação do documento principal (preferencialmente o CPF);
+    Endereços da pessoa, com indicação dos endereços com diligência positiva;
+    Vínculos existentes entre as pessoas (representante, filial, etc);
+    Demais dados básicos das pessoas.
+
+Além disso, o serviço deve:
+    Buscar os dados de outras bases autoritativas, como o da Receita Federal, SIEEL (endereços eleitorais), etc.;
+    Manter os dados atualizados com eventual mudança obtida da Receita Federal.
+
+https://docs.pdpj.jus.br/servicos-estruturantes/pessoas
+https://gateway.stg.cloud.pje.jus.br/pessoas-api/swagger-ui.html
+
+________________________________________
+---> Endereços
+O objetivo do serviço de cadastro de endereços é armazenar de forma centralizada os dados de todas os endereços utilizados pelos demais serviços e módulos da PDPJ, bem como pelos diversos sistemas de processo judicial eletrônico.
+Além das informações básicas de endereço e das entidades de domínio correlatas (países, estados e municípios), o serviço deve prover as seguintes informações:
+    Fuso horário do município;
+    Latitude e longitudade do endereço.
+
+https://docs.pdpj.jus.br/servicos-estruturantes/enderecos
+https://gateway.stg.cloud.pje.jus.br/enderecos/swagger-ui.html
+
+________________________________________
+---> Cabeçalho Processual
+https://docs.pdpj.jus.br/servicos-estruturantes/cabecalho-processual
+https://gateway.stg.cloud.pje.jus.br/cabecalho-processual/swagger-ui.html
+
+________________________________________
+---> Organizacional
+Este serviço visa manter os dados de todos os órgãos do Poder Judiciário, bem como dos órgãos externos que interagem diretamente com o Poder Judiciário (Ministério Público, Defensorias, Procuradorias, Polícias, etc).
+Atualmente, ele expõe uma fachada REST para o sistema CNJ Corporativo (API Corporativo-Proxy).
+Futuramente, ele virá a substituir integralmente o CNJ Corporativo.
+
+https://docs.pdpj.jus.br/servicos-estruturantes/organizacional
+https://gateway.stg.cloud.pje.jus.br/corporativo-proxy/swagger-ui.html
+
+
+________________________________________
+---> Petição Intercorrente
+https://docs.pdpj.jus.br/servicos-negociais/portal-servicos/pet-intercorrente
+https://portalexterno-tribunais.stg.pdpj.jus.br/swagger-ui.html#/Integra%C3%A7%C3%A3o_V1
+
+________________________________________
+Remessa Digital - Ofícios
+https://docs.pdpj.jus.br/servicos-negociais/portal-servicos/oficios
+
+Remessa Digital - Declínio de Competência
+https://docs.pdpj.jus.br/servicos-negociais/portal-servicos/declinio
+
+Remessa Digital - Cartas
+https://docs.pdpj.jus.br/servicos-negociais/portal-servicos/cartas
+
+Remessa Digital - Resposta da Carta
+https://docs.pdpj.jus.br/servicos-negociais/portal-servicos/resp-carta-precatoria
+
+https://portal-interno-api-tribunais.stg.pdpj.jus.br/swagger-ui.html
+________________________________________
+
+________________________________________
+
+
+________________________________________
+
+
+
+________________________________________
+
+
+
+________________________________________
+
+
+
+________________________________________
+
+
+
+________________________________________
+
+
+
+________________________________________
+
+
+
+
+
+
+
+
+

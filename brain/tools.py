@@ -1,4 +1,3 @@
-import os, getpass
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import HumanMessage
 
@@ -10,4 +9,3 @@ def get_ai_message(message):
     print(ai_message.content)
     return ai_message.content
 
-get_ai_message("Hello!")
